@@ -1,0 +1,11 @@
+builders:
+  expose:
+    import: "package:angel_generator/builders.dart"
+    builder_factories:
+      - exposeGenerator
+    auto_apply: root_package
+    applies_builders:
+      - source_gen|combining_builder
+    build_extensions:
+      .dart:
+        - .angel_expose.g.part
